@@ -80,7 +80,7 @@ class Stage extends ConfObj {
         stick = Sticker.create(pos,w,h,'se');
         if (this.options.aspectRatio) stick.aspect = this.options.aspectRatio;
         crop.render(pos);
-        this.focus();
+        //this.focus();
         return true;
       },
       (x,y) => {
@@ -111,7 +111,7 @@ class Stage extends ConfObj {
       this.crops.delete(widget);
       this.crops.add(widget);
       this.reorderWidgets();
-      this.active.el.focus();
+      //this.active.el.focus();
       this.options.shade && this.shades.enable();
       widget.emit('crop.activate');
     } else {
@@ -132,7 +132,7 @@ class Stage extends ConfObj {
     const crop = (this.options.widgetConstructor || Widget).create(options);
     crop.render(rect.unscale(this.scalex,this.scaley));
     this.addWidget(crop);
-    crop.el.focus();
+    //crop.el.focus();
     return crop;
   }
 

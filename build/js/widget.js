@@ -66,7 +66,7 @@ class Widget extends ConfObj {
         if (!this.stage.enabled) return false;
         [w,h] = [ pe.offsetWidth, pe.offsetHeight ];
         stick = Rect.from(this.el);
-        this.el.focus();
+        //this.el.focus();
         this.stage.activate(this);
         return true;
       },
@@ -104,7 +104,7 @@ class Widget extends ConfObj {
           const h = pe.offsetHeight;
           stick = Sticker.create(Rect.from(this.el), w, h, c);
           if (this.aspect) stick.aspect = this.aspect;
-          this.el.focus();
+          //this.el.focus();
           this.emit('crop.active');
           return true;
         },
